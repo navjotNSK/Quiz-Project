@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Questions</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+.main {
+    width: 100%;
+    height: 150vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 128, 207);
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #19109a;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 0; /* Remove margin-bottom */
+        }
+
+        nav {
+    background-color: #153f7d;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 0; /* Remove margin-top */
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input,
+        select {
+            margin-top: 5px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            margin-top: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Question Section</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#login">Login</a>
+        <a href="#signup">Signup</a>
+        <a href="addQuestions.html">Add Questions</a>
+    </nav>
+    <section class="main">
+        <div class="container">
+            <h2>Add Questions</h2>
+            <form id="addQuestionForm">
+                <label for="questionTitle">Question Title:</label>
+                <input type="text" id="questionTitle" name="questionTitle" required>
+
+                <label for="option1">Option 1:</label>
+                <input type="text" id="option1" name="option1" required>
+
+                <label for="option2">Option 2:</label>
+                <input type="text" id="option2" name="option2" required>
+
+                <label for="option3">Option 3:</label>
+                <input type="text" id="option3" name="option3" required>
+
+                <label for="option4">Option 4:</label>
+                <input type="text" id="option4" name="option4" required>
+
+                <label for="rightAnswer">Correct Option:</label>
+                <input type="text" id="rightAnswer" name="rightAnswer" required>
+                <!-- <select id="rightAnswer" name="rightAnswer" required>
+                    <option value="a">Option A</option>
+                    <option value="b">Option B</option>
+                    <option value="c">Option C</option>
+                    <option value="d">Option D</option>
+                </select> -->
+
+                <label for="difficultyLevel">Difficulty Level:</label>
+                <select id="difficultyLevel" name="difficultyLevel" required>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+
+                <label for="category">Category:</label>
+                <input type="text" id="category" name="category" required>
+
+                <button type="button" onclick="addQuestion()">Add Question</button>
+            </form>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
